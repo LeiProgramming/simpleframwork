@@ -1,4 +1,4 @@
-package org.simpleframework.core.util;
+package org.simpleframework.util;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -29,7 +29,8 @@ public class ClassUtil {
             File packageDirectory = new File(url.getPath());
             extractClassFile(classSet, packageDirectory, packageName);
         }
-        return null;
+        //TODO 此处可以加入其他资源类型的处理
+        return classSet;
     }
 
     /**
