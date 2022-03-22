@@ -2,8 +2,10 @@ package com.imooc.service.solo;
 
 import com.imooc.entity.bo.HeadLine;
 import com.imooc.entity.dto.Result;
+import org.simpleframework.core.annotation.Service;
 
 import java.util.List;
+
 
 public interface HeadLineService {
     Result<Boolean> addHeadLine(HeadLine headLine);
