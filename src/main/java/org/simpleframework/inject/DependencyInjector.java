@@ -84,6 +84,7 @@ public class DependencyInjector {
                 if (classSet.size() == 1){
                     return classSet.iterator().next();
                 } else {
+                    // 如果多余两个实现类且用户未指定其中一个实现类，则抛出异常
                     throw new RuntimeException("multiple implemented classes for" + fieldClass.getName());
                 }
             } else {
