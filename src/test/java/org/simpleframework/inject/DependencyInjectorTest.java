@@ -18,6 +18,7 @@ public class DependencyInjectorTest {
         Assertions.assertEquals(true, instance.isLoaded());
         MainPageController mainPageController = (MainPageController) instance.getBean(MainPageController.class);
         Assertions.assertEquals(true, mainPageController instanceof MainPageController);
+        Assertions.assertEquals(null, mainPageController.getHeadLineShopCategoryCombineService());
         new DependencyInjector().doIoc();
         Assertions.assertNotEquals(null, mainPageController.getHeadLineShopCategoryCombineService());
     }
